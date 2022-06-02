@@ -28,6 +28,7 @@ include 'secsidebar.php';
                         <th scope="col">Total Flats</th>
                         <th scope="col">Collected Flats</th>
                         <th scope="col">Activation</th>
+                        <th scope="col">Details of Remainingn flats</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -46,17 +47,18 @@ include 'secsidebar.php';
                             <td><?php echo $data2['total_flats'] ?></td>
                             <td><?php echo $cdata['total'] ?></td>
                             <td><a class="btn btn-outline-primary" href="./activationstatus.php?status=<?php echo $data['ac_status'] ?>&m_id=<?php echo $data['maint_id'] ?>"><?php if ($data['ac_status'] == 0) {
-                                                                                                                                            echo "Activate";
-                                                                                                                                        } else {
-                                                                                                                                            echo "Deactivate";
-                                                                                                                                        } ?></a></td>
+                                                                                                                                                                                    echo "Activate";
+                                                                                                                                                                                } else {
+                                                                                                                                                                                    echo "Deactivate";
+                                                                                                                                                                                } ?></a></td>
+                            <td><a class="btn btn-outline-primary" href="./showremain.php?ID=<?php echo $data['maint_id'] ?>">Show</a></td>
                         </tr>
                     <?php
                     }
                     ?>
                 </tbody>
             </table>
-            <a class="btn btn-success" href="">Generate Maintainance</a>
+            <a class="btn btn-success" href="./generatemaintainance.php">Generate Maintainance</a>
         <?php
         } else {
         ?>

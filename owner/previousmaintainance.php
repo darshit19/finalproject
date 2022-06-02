@@ -24,7 +24,7 @@ include 'ownerside.php';
             $_bid = $_SESSION['owedetails']['b_id'];
         ?>
             <div class="card">
-                <h5 class="card-header ">Successfully Paid...</h5>
+                <h4 class="card-header ">Successfully Paid...</h4>
                 <div class="card-body">
                     <h5 class="card-title">FlatNo : <?php echo $_flatno ?></h5>
                     <p class="card-text">Maintainance Month : <?php echo '' . $month_names[$data['month'] - 1] . ''; ?>/<?php echo $data['year'] ?></p>

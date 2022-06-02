@@ -12,7 +12,7 @@
   <a  href="#home">Profile</a>
   <a href="./maintainancepanel.php">Maintainance Panel</a>
   <a href="">Manage Renter</a>
-  <a href="">Vehicle Panel</a>
+  <a href="./vehiclepanel.php">Vehicle Panel</a>
   <a href="">Complaints</a>
   <a href="./ownerlogout.php" onclick="return confirm('Are you Sure You want to Sign Out ?')">SignOut</a>
 </div>

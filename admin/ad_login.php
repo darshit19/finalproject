@@ -13,22 +13,23 @@ if(isset($_POST['login'])){
         //include connection file
         include "connection.php";
 
-        $respone=mysqli_query($con,$sql);
-        if(mysqli_num_rows($respone)>0){
-            $data=mysqli_fetch_assoc($respone);
+        $respones=mysqli_query($con,$sql);
+        if(mysqli_num_rows($respones)>0){
+            $data=mysqli_fetch_assoc($respones);
             $_SESSION['admin_id']=$data['admin_id'];
             $_SESSION['admin_email']=$data['admin_email'];
             header("location:./managebuilding.php");
         }
+        else{
+            ?>
+            <script>
+                alert("Please enter valid Email");
+            </script>
+            <?php
+          echo "<script>setTimeout(\"location.href = 'adminlogin.php';\",200); </script>";
+        }
     }
-    else{
-        ?>
-        <script>
-            alert("Please enter valid Email");
-        </script>
-        <?php
-      echo "<script>setTimeout(\"location.href = 'adminlogin.php';\",200); </script>";
-    }
+    
 
 }
 ?>
