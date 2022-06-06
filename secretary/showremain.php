@@ -21,12 +21,10 @@ include 'secsidebar.php';
             <span><button type="submit" class="btn btn-primary"  id="sendall" >Send Message</button>  </span>
             </form>
         </div>
-        <table class="table ">
+        <table class="table " style="max-width: 12rem;">
             <thead>
                 <tr>
                     <th scope="col">FlatNo</th>
-                    <th scope="col">Message Box</th>
-                    <th scope="col">Send Message</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,10 +34,6 @@ include 'secsidebar.php';
                 ?>
                     <tr>
                         <th scope="row"><?php echo $data['flatno'] ?></th>
-                        <form action="sendmessage.php?flatno=<?php echo $data['flatno']?>" method="post">
-                        <td><input name="msg"    type="textarea" placeholder="type message here..." class="form-control sendmsg2"></td>
-                        <td><button type="submit"  class="btn btn-primary" id="send" >Send</button></td>
-                        </form>
                     </tr>
                 <?php
                 }

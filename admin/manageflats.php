@@ -23,7 +23,6 @@ include "./sidebar.php";
                         <th scope="col">Floor No.</th>
                         <th scope="col">isOwned</th>
                         <th scope="col">isOnrent</th>
-                        <th scope="col">isEmpty</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,11 +41,6 @@ include "./sidebar.php";
                                     echo "Y";
                                 } else {
                                     echo "N";
-                                } ?></td>
-                            <td><?php if ($data['isempty'] == 1) {
-                                    echo "N";
-                                } else {
-                                    echo "Y";
                                 } ?></td>
                         </tr>
                     <?php

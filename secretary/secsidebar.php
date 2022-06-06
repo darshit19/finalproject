@@ -5,6 +5,8 @@
     
     <!-- for google icons   -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="../css/anchortag.css">
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
@@ -12,11 +14,9 @@
   <a  href="">Profile</a>
   <a href="./manageowners.php">Manage Owners</a>
   <a href="./managemaintainance.php">Maintainance Panel</a>
-  <a href="">Complaints</a>
-  <a href="">Announcements</a>
+  <a href="./usercomplaints.php">Complaints</a>
+  <a href="./announcements.php">Announcements</a>
+  <a href="./vehicledetails.php">Vehicle Panel</a>
   <a href="./secretarylogout.php" onclick="return confirm('Are you Sure You want to Sign Out ?')">SignOut</a>
 </div>
 
-<!-- <div class="content">
-  
-</div> -->

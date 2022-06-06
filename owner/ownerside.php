@@ -11,9 +11,10 @@
 <div class="sidebar">
   <a  href="#home">Profile</a>
   <a href="./maintainancepanel.php">Maintainance Panel</a>
-  <a href="">Manage Renter</a>
+  <a href="./managerenter.php">Manage Renter</a>
   <a href="./vehiclepanel.php">Vehicle Panel</a>
-  <a href="">Complaints</a>
+  <a href="./buildannouncement.php">Announcements</a>
+  <a href="./complaint.php">My Complaints</a>
   <a href="./ownerlogout.php" onclick="return confirm('Are you Sure You want to Sign Out ?')">SignOut</a>
 </div>
 

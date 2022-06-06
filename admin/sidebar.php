@@ -13,7 +13,6 @@
   <a href="managebuilding.php">Manage Buildings</a>
   <a href="flats.php">Manage Flats</a>
   <a href="managecommittee.php">Manage Committee</a>
-  <a href="announcements.php">Announcements</a>
   <a href="adminlogout.php" onclick="return confirm('Are you Sure You want to Sign Out ?')">SignOut</a>
 </div>
 

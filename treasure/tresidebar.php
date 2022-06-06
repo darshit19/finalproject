@@ -14,7 +14,7 @@
   <a href="">Maintainance Panel</a>
   <a href="">Income&Expense</a>
   <a href="">Announcements</a>
-  <a href="" onclick="confirm('Are you Sure You want to Sign Out ?')">SignOut</a>
+  <a href="" onclick="return confirm('Are you Sure You want to Sign Out ?')">SignOut</a>
 </div>
 
 <!-- <div class="content">

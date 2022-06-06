@@ -24,12 +24,13 @@ include "./sidebar.php";
                         <th scope="col">Flats per floor</th>
                         <th scope="col">Total Flats</th>
                         <th scope="col">Maintainance</th>
-                        <th scope="col" colspan="2">Operation</th>
+                        <th scope="col" >Operation</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                     while ($data = mysqli_fetch_assoc($response)) {
+                        $dataurl = urlencode(serialize($data));
                     ?>
                         <tr>
                             <th scope="row"><?php echo $data['b_id'] ?></th>
@@ -38,7 +39,7 @@ include "./sidebar.php";
                             <td><?php echo $data['total_flats'] ?></td>
                             <td><?php echo $data['maintainance'] ?></td>
                             <td><a class="material-icons" href="./deletebuilding.php?ID=<?php echo $data['b_id']?>" onclick="return confirm('Are you sure you want to delete this Building??\nIf you delete this building then data regarding this building will also be deleted.\nDo you want to continue?')">delete</a></td>
-                            <td><a class="material-icons" href="./updatebuilding.php?ID=<?php echo $data['b_id']?>">edit</a></td>
+                            
                         </tr>
                     <?php
                     }
