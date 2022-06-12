@@ -16,17 +16,18 @@ if(isset($_POST['login'])){
         $respones=mysqli_query($con,$sql);
         if(mysqli_num_rows($respones)>0){
             $data=mysqli_fetch_assoc($respones);
+            $_SESSION['admin']=$data;
             $_SESSION['admin_id']=$data['admin_id'];
             $_SESSION['admin_email']=$data['admin_email'];
-            header("location:./managebuilding.php");
+            header("location:./profile.php");
         }
         else{
             ?>
             <script>
-                alert("Please enter valid Email");
+                alert("Please enter valid Login Credentials");
             </script>
             <?php
-          echo "<script>setTimeout(\"location.href = 'adminlogin.php';\",200); </script>";
+          echo "<script>setTimeout(\"location.href = '../adminlogin.php';\",200); </script>";
         }
     }
     

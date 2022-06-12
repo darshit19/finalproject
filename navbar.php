@@ -29,15 +29,15 @@
 
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand " href="home.php">Navbar</a>
+      <a class="navbar-brand " href="home.php">HETVI HEIGHTS</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse mx-3" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Login
+               Login
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>

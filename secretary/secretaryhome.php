@@ -5,4 +5,5 @@ include 'secsidebar.php';
 <?php
 $dataarr=unserialize(urldecode($_GET['response']));
 $_SESSION['secdetails']=$dataarr;
+header("location:./profile.php");
 ?>

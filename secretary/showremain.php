@@ -21,6 +21,7 @@ include 'secsidebar.php';
             <span><button type="submit" class="btn btn-primary"  id="sendall" >Send Message</button>  </span>
             </form>
         </div>
+        <div class="container ">
         <table class="table " style="max-width: 12rem;">
             <thead>
                 <tr>
@@ -40,6 +41,7 @@ include 'secsidebar.php';
                 ?>
             </tbody>
         </table>
+        </div>
     <?php
     } else {
     ?>

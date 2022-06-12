@@ -49,6 +49,8 @@ if (isset($_POST['submit'])) {
     include 'connection.php';
     $response = mysqli_query($con, $sql);
     if ($response) {
+        $sql1="update flattb set isonrent='1' where flatno='$_flatno'";
+        $response1 = mysqli_query($con, $sql1);
 ?>
         <script>
             alert("Renter Added Successfully !!");
