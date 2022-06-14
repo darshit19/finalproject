@@ -16,7 +16,7 @@
   <a href="./income.php">Income Panel</a>
   <a href="./expense.php">Expense Panel</a>
   <a href="./maintainancereport.php">Maintainance Report</a>
-  <a href="">Income&Expense</a>
+  <a href="./inandexreports.php">Income&Expense</a>
   <a href="./treasurelogout.php" onclick="return confirm('Are you Sure You want to Sign Out ?')">SignOut</a>
 </div>
 

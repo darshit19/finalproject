@@ -55,7 +55,7 @@ if (isset($_POST['generate'])) {
     $month = $_POST['month'];
     if ($year && $month != 'dummy') {
         $_money = $_SESSION['m_money'];
-        $sql = "INSERT INTO `maintainancetb`( `month`, `year`, `b_id`, `ac_status`, `m_money`) VALUES ('$month','$year','$_bid','0','$_money') ";
+        $sql = "INSERT INTO `maintainancetb`( `month`, `year`, `b_id`, `ac_status`, `m_money`) VALUES ('$month','$year','$_bid','1','$_money') ";
         include 'connection.php';
         $response = mysqli_query($con, $sql);
         if ($response) {
