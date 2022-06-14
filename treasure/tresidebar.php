@@ -10,13 +10,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 <div class="sidebar">
-  <a href="./profile.php">
-    <span class="material-symbols-rounded mx-5">
-      account_circle
-    </span></a>
-  <a href="">Income Panel</a>
-  <a href="">Expense Panel</a>
-  <a href="">Maintainance Report</a>
+  <a href="./profile.php" class="material-symbols-rounded mx-5">
+    account_circle
+  </a>
+  <a href="./income.php">Income Panel</a>
+  <a href="./expense.php">Expense Panel</a>
+  <a href="./maintainancereport.php">Maintainance Report</a>
   <a href="">Income&Expense</a>
   <a href="./treasurelogout.php" onclick="return confirm('Are you Sure You want to Sign Out ?')">SignOut</a>
 </div>
