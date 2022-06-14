@@ -16,7 +16,7 @@ for ($i = 1; $i < $floor+1; $i++) {
     for ($j = 0; $j < $flat; $j++) {
         $flatnoN++;
         $flatno = $flatnoA . $flatnoN;
-        $sql .= "insert into flatTB(`flatno`, `b_id`, `floorno`, `isowned`, `isonrent`, `isempty`) values('$flatno','$b_id','$i','$flatstatus','$flatstatus','$flatstatus');";
+        $sql .= "insert into flatTB(`flatno`, `b_id`, `floorno`, `isowned`, `isonrent`) values('$flatno','$b_id','$i','$flatstatus','$flatstatus');";
     }
     
     $flatnoN = $flatnoN - $flat + 100;

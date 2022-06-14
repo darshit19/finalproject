@@ -12,18 +12,18 @@ $response = mysqli_query($con, $sql);
 </head>
 <section class="vh-100 ">
     <div class="container-fluid h-custom">
-        <p class="h1 container" style="padding: 3vw;">Welcome To , Owner's Log in !</p>
+        <p class="h1 container" style="padding: 3vw;">Welcome To , Renter's Log in !</p>
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-9 col-lg-6 col-xl-5">
                 <img src="./img/loginpageimg.webp" class="img-fluid" alt="Sample image">
             </div>
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                <form method="POST" action="./owner/login.php">
+                <form method="POST" action="./owner/rentlogin.php">
 
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                        <input name="email" type="email" id="form3Example3" class="form-control form-control-lg" placeholder="Enter a valid Owner Mail" required />
-                        <label class="form-label" for="form3Example3">Owner Mail</label>
+                        <input name="email" type="email" id="form3Example3" class="form-control form-control-lg" placeholder="Enter a valid renter email" required />
+                        <label class="form-label" for="form3Example3">Renter Mail</label>
                     </div>
 
                     <div class="mb-3">

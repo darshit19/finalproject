@@ -24,8 +24,9 @@ if (mysqli_num_rows($response) > 0) {
                 <p class="card-text">Email : <?php echo $data['r_email']?></p>
                 <p class="card-text">Mobile no : <?php echo $data['r_mobile']?></p>
                 <p class="card-text">Rent : <?php echo $data['rent']?></p>
-                <a href="./updaterenter.php?ID=<?php echo $data['r_id']?>" class="btn btn-primary">Change or Update Renter</a>
-                <a href="./removerenter.php?ID=<?php echo $data['r_id']?>" onclick="return confirm('Are you sure you want to remove renter')" class="btn btn-danger">Remove Renter</a>
+                <a href="./updaterenter.php?ID=<?php echo $data['r_id']?>" class="btn btn-primary <?php if($_SESSION['renter']==1){echo 'disabled';}?>">Change or Update Renter</a>
+                <a href="./removerenter.php?ID=<?php echo $data['r_id']?>" onclick="return confirm('Are you sure you want to remove renter')" class="btn btn-danger <?php if($_SESSION['renter']==1){echo 'disabled';}?> ">Remove Renter</a>
+                <?php if($_SESSION['renter']==1){echo '<h3 class="my-3" style="color: red;">You can not access this feature as you are renter</h3>';}?>
             </div>
         </div>
 <?php

@@ -48,7 +48,12 @@ if (isset($_POST['add'])) {
   include "connection.php";
   $sql = "INSERT INTO `buildingtb`(`b_id`, `no_of_floors`, `flats_per_floor`, `total_flats`, `maintainance`) VALUES ('$bid','$floors','$flats','$total','$maintainance')";
   if (mysqli_query($con, $sql)) {
-    header("location:managebuilding.php");
+?>
+    <script>
+      alert("Building Added Successfully !!");
+      setTimeout(window.location.href = "./managebuilding.php", 10);
+    </script>
+<?php
   } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }

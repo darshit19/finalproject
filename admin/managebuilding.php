@@ -4,8 +4,9 @@ session_start();
 <?php
 include "./sidebar.php";
 ?>
+
 <head>
-<link rel="stylesheet" href="../css/anchortag.css">
+    <link rel="stylesheet" href="../css/anchortag.css">
 </head>
 <div class="content">
     <div class="container">
@@ -15,7 +16,7 @@ include "./sidebar.php";
         $response = mysqli_query($con, $sql);
         if (mysqli_num_rows($response) > 0) {
         ?>
-        <h2 class="py-3">Building Details</h2>
+            <h2 class="py-3">Building Details</h2>
             <table class="table ">
                 <thead>
                     <tr>
@@ -24,7 +25,7 @@ include "./sidebar.php";
                         <th scope="col">Flats per floor</th>
                         <th scope="col">Total Flats</th>
                         <th scope="col">Maintainance</th>
-                        <th scope="col" >Operation</th>
+                        <th scope="col" colspan="2">Operation</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,8 +39,8 @@ include "./sidebar.php";
                             <td><?php echo $data['flats_per_floor'] ?></td>
                             <td><?php echo $data['total_flats'] ?></td>
                             <td><?php echo $data['maintainance'] ?></td>
-                            <td><a class="material-icons" href="./deletebuilding.php?ID=<?php echo $data['b_id']?>" onclick="return confirm('Are you sure you want to delete this Building??\nIf you delete this building then data regarding this building will also be deleted.\nDo you want to continue?')">delete</a></td>
-                            
+                            <td><a class="material-icons" href="./deletebuilding.php?ID=<?php echo $data['b_id'] ?>" onclick="return confirm('Are you sure you want to delete this Building??\nIf you delete this building then data regarding this building will also be deleted.\nDo you want to continue?')">delete</a></td>
+                            <td><a class="material-icons" href="./updatebuilding.php?response=<?php echo $dataurl ?>">edit</a></td>
                         </tr>
                     <?php
                     }
@@ -50,7 +51,7 @@ include "./sidebar.php";
         <?php
         } else {
         ?>
-             <div class="container pt-5">
+            <div class="container pt-5">
                 <div class="card text-center">
                     <div class="card-header">
                         No Buildings are added there till now !

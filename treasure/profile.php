@@ -21,6 +21,6 @@ include './tresidebar.php'
         <a href="#" class="anccard"><i class="fa fa-twitter"></i></a>
         <a href="#" class="anccard"><i class="fa fa-linkedin"></i></a>
         <a href="#" class="anccard"><i class="fa fa-facebook"></i></a>
-        <p><button class="mt-3" >Edit Profile</button></p>
+        <p><button class="btnedit mt-3" onclick="location.href='./editprofile.php'">Edit Profile</button></p>
     </div>
 </div>
