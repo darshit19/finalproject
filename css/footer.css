@@ -1,8 +1,8 @@
 .footer {
     width: 100%;
     position: relative;
-    height: 10vh;
-    background-color: #ffffff;
+    height: 14vh;
+    background-color: #060606;
   }
   .footer .col {
     width: 190px;
@@ -20,7 +20,7 @@
     font-size: 12px;
     line-height: 17px;
     padding: 20px 0px 5px 0px;
-    color: #999999;
+    color: #ffffff;
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.250em;

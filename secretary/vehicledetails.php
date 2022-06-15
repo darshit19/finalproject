@@ -30,7 +30,7 @@ include 'secsidebar.php';
                         if(mysqli_num_rows($response2)>0){
                             while($data2=mysqli_fetch_assoc($response2)){
                                 ?>
-                                <p class="card-text">TYPE:<?php if($data2['type_id']==1){echo "Two Wheeler";}else{echo "Four Wheeler";}?>  NUMBER:<?php echo $data2['vehicle_num']?>  NAME:<?php echo $data2['v_name']?>  COLOR:<?php echo $data2['color']?></p>
+                                <p class="card-text"><b>TYPE:</b><?php if($data2['type_id']==1){echo "Two Wheeler";}else{echo "Four Wheeler  ";}?><br> <b>NUMBER:</b><?php echo $data2['vehicle_num']."  "?><br> <b>NAME:</b><?php echo $data2['v_name']."  "?><br><b>COLOR:</b><?php echo $data2['color']."  "?></p>
                                 <hr>
                                 <?php
                             }
