@@ -12,6 +12,7 @@ include './tresidebar.php';
 $bid = $_SESSION['tredetails']['b_id'];
 ?>
 <div class="content">
+    
     <a class="btn btn-dark my-5 mx-3 disabled" href="">Current Month Income</a>
     <a class="btn btn-dark my-5" href="./previousincome.php">Previous Months' Income</a>
 

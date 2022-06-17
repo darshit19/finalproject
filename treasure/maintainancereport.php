@@ -15,6 +15,12 @@ $response = mysqli_query($con, $sql);
     <?php
     if (mysqli_num_rows($response) > 0) {
     ?>
+    <div class="container">
+        <?php
+        include './balance.php';
+        ?>
+    <h2 class="py-3">Your Building's Current Balance : <?php echo $balance; ?> .rs</h2>
+    </div>
         <h2 class="py-3"><?php echo $bid ?> Building Maintainance Details</h2>
         <table class="table ">
             <thead>

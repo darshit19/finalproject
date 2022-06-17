@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     position: relative;
-    height: 14vh;
+    height: 40vh;
     background-color: #060606;
   }
   .footer .col {
@@ -11,7 +11,7 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    padding: 0px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
   }
   .footer .col h1 {
     margin: 0;
