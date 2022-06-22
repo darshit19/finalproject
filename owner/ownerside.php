@@ -17,6 +17,7 @@
       account_circle
     </span></a>
   <a href="./maintainancepanel.php">Maintainance Panel</a>
+  <!-- <a href="./dummy.php">Maintainance Panel</a> -->
   <a href="./managerenter.php">Manage Renter</a>
   <a href="./vehiclepanel.php">Vehicle Panel</a>
   <a href="./buildannouncement.php">Announcements</a>

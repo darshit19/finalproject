@@ -23,13 +23,12 @@ include 'ownerside.php';
         while ($data = mysqli_fetch_assoc($response)) {
             $_bid = $_SESSION['owedetails']['b_id'];
         ?>
-            <div class="card">
+            <div class="card my-4">
                 <h4 class="card-header ">Successfully Paid...</h4>
                 <div class="card-body">
                     <h5 class="card-title">FlatNo : <?php echo $_flatno ?></h5>
                     <p class="card-text">Maintainance Month : <?php echo '' . $month_names[$data['month'] - 1] . ''; ?>/<?php echo $data['year'] ?></p>
                     <p class="card-text">Payable Money : <?php echo $data['m_money'] . ' rs.'; ?></p>
-                    <a href="#" class="btn btn-success disabled">Paid</a>
                 </div>
             </div>
         <?php

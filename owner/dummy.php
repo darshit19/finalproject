@@ -27,16 +27,16 @@ include 'ownerside.php';
         while ($data = mysqli_fetch_assoc($response)) {
             $_bid = $_SESSION['owedetails']['b_id'];
         ?>
-            <div class="card my-3">
+            <div class="card">
                 <h4 class="card-header ">Pending...</h4>
                 <div class="card-body">
                     <h5 class="card-title">FlatNo : <?php echo $_flatno ?></h5>
                     <p class="card-text">Maintainance Month : <?php echo '' . $month_names[$data['month'] - 1] . ''; ?>/<?php echo $data['year'] ?></p>
                     <p class="card-text">Payable Money : <?php echo $data['m_money'] . ' rs.'; ?></p>
                     <form method="post">
-                    <input type="button" class="btn btn-success " name="btn" id="btn" value="Pay Now" onclick="pay_now()" />
-                        <input type="hidden" value="<?php echo $data['m_money'] ?>" name="amt" id="amt" placeholder="Enter your name" />
-                        <input type="hidden" value="<?php echo $data['maint_id'] ?>" name="mid" id="mid" placeholder="Enter amt" />
+                        <input type="hidden" value="<?php echo $data['m_money'] ?>" name="amt" id="amt" placeholder="Enter your name" /><br /><br />
+                        <input type="hidden" value="<?php echo $data['maint_id'] ?>" name="mid" id="mid" placeholder="Enter amt" /><br /><br />
+                        <input type="button" name="btn" id="btn" value="Pay Now" onclick="pay_now()" />
                     </form>
                 </div>
             </div>
@@ -56,7 +56,7 @@ include 'ownerside.php';
     function pay_now() {
 
         var mid = jQuery('#mid').val();
-        var amt = jQuery('#amt').val();
+        var amt = jQuery('#mid').val();
 
 
         var options = {
