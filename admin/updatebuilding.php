@@ -31,7 +31,8 @@ $dataaarr = unserialize(urldecode($_GET['response']));
         <label>Maintainance :</label>
         <input type="number" name="maintainance" class="form-control" value="<?php echo $dataaarr['maintainance'] ?>" id="mnt" placeholder="Enter Maintainance amount" required>
       </div><br>
-      <button name="update" type="submit" class="btn btn-primary" style="margin-top: 13px;">Update Building</button>
+      <button name="update" type="submit" class="btn btn-primary" >Update Building</button>
+      <a name="cancel" href="./managebuilding.php" class="btn btn-danger my-3 ">CANCEL</a>
     </form>
   </div>
 </div>

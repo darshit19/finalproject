@@ -16,6 +16,8 @@ $pre_mob = $_GET['MOBILE'];
 $pre_email = $_GET['EMAIL'];
 $mid = $_GET['MID'];
 ?>
+
+<script src="../js/mmvalidation.js"></script>
 <div class="content">
     <div class="container my-5">
         <h1 class="mb-4 ">Fill up The Member's Details</h1>
@@ -44,14 +46,15 @@ $mid = $_GET['MID'];
                 <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $b_id ?>" readonly>
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Member's Mobile Number :</label>
-                <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="Enter Member's Mobile Number : " name="mobile" pattern="[6-9]{1}[0-9]{9}" value="<?php echo $pre_mob ?>" required>
+                <label for="exampleFormControlInput1" class="form-label">Member's Mobile Number :</label><span id="errmobile"></span>
+                <input type="number" class="form-control" id="mobile" placeholder="Enter Member's Mobile Number : " name="mobile"  onkeyup="validatemobile()" onchange="validatemobile()" pattern="[6-9]{1}[0-9]{9}" minlength="10" maxlength="10" value="<?php echo $pre_mob ?>" required>
             </div>
             <div class="form-group mb-3">
-                <label for="exampleInputEmail1">Email address :</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email" value="<?php echo $pre_email ?>" required>
+                <label for="exampleInputEmail1">Email address :</label><span id="erremail"></span>
+                <input type="email" class="form-control" onchange="validateemail()" onkeyup="validateemail()" id="email" aria-describedby="emailHelp" name="email" placeholder="Enter email" value="<?php echo $pre_email ?>" required>
             </div>
             <button name="update" type="submit" class="btn btn-dark">Update</button>
+            <a name="cancel" href="./showcommittee.php?BID=<?php echo $b_id ?>" class="btn btn-danger my-2 ">CANCEL</a>
             <!-- <button name="reset" type="reset" class="btn btn-dark">Clear</button> -->
         </form>
     </div>

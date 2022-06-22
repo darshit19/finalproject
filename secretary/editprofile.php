@@ -8,6 +8,7 @@ $email=$_SESSION['secdetails']['m_email'];
 <?php
 include './secsidebar.php';
 ?>
+<script src="../js/mmvalidation.js"></script>
 <div class="content">
 
     <div class="container my-5">
@@ -18,12 +19,12 @@ include './secsidebar.php';
                 <input type="text" name="m_name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Member's Name : " value="<?php echo $name ?>" required>
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"> Mobile Number :</label>
-                <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="Enter Member's Mobile Number : " name="mobile" pattern="[6-9]{1}[0-9]{9}" value="<?php echo $mobile ?>" required>
+                <label for="exampleFormControlInput1" class="form-label"> Mobile Number : </label><span id="errmobile"></span>
+                <input type="number"  class="form-control" id="mobile" onkeyup="validatemobile()" onchange="validatemobile()" maxlength="10" placeholder="Enter Member's Mobile Number : " name="mobile" pattern="[6-9]{1}[0-9]{9}" value="<?php echo $mobile ?>" required>
             </div>
             <div class="form-group mb-3">
-                <label for="exampleInputEmail1">Email address :</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email" value="<?php echo $email ?>" required>
+                <label for="exampleInputEmail1">Email address : </label><span id="erremail"></span>
+                <input type="email" class="form-control" onchange="validateemail()" onkeyup="validateemail()" id="email" aria-describedby="emailHelp" name="email" placeholder="Enter email" value="<?php echo $email ?>" required>
             </div>
             <button name="update" type="submit"  style="margin-top: 13px;" class="btn btn-dark">UPDATE</button>
             <a name="cancel" href="./profile.php" class="btn btn-danger " style="margin-top: 13px;">CANCEL</a>

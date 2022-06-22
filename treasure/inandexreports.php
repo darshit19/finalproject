@@ -24,8 +24,12 @@ include './tresidebar.php';
                     <label for="exampleFormControlInput1" class="form-label">YEAR : </label>
                     <input name="year" placeholder="enter year of expense" id="year" onchange="filterreports()" onkeyup="filterreports()" value="<?php echo $data['in_year'] ?>" type="number" class="form-control col-7" min="2022" max="2099" required>
                 </div>
+                <div class="my-2 col-sm" style="max-width: 20vw;">
+                    <button class="btn btn-dark mx-3 my-4" onclick="window.print()">Print</button>
+                </div>
             </div>
         </form>
+
     </div>
 
     <h3>

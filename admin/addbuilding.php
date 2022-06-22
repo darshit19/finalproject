@@ -31,7 +31,8 @@ include "sidebar.php";
         <label>Maintainance :</label>
         <input type="number" name="maintainance" class="form-control" id="mnt" placeholder="Enter Maintainance amount" required>
       </div><br>
-      <button name="add" type="submit" class="btn btn-primary" style="margin-top: 13px;">ADD Building</button>
+      <button name="add" type="submit" class="btn btn-primary" ">ADD Building</button>
+      <a name="cancel" href="./managebuilding.php" class="btn btn-danger my-3 ">CANCEL</a>
     </form>
   </div>
 </div>

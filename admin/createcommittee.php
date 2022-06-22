@@ -12,13 +12,15 @@ $response = mysqli_query($con, $sql);
 $b_id = $_GET['BID'];
 $role = $_GET['ROLE'];
 ?>
+
+<script src="../js/mmvalidation.js"></script>
 <div class="content">
     <div class="container my-5">
         <h1 class="mb-4 ">Fill up The Member's Details</h1>
         <form action="" method="POST">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Member's Name :</label>
-                <input type="text" name="m_name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Member's Name : ">
+                <input type="text" name="m_name" class="form-control" id="exampleFormControlInput1" placeholder="Enter Member's Name : " required>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Member's Role :</label>
@@ -38,12 +40,12 @@ $role = $_GET['ROLE'];
                 <input type="text" class="form-control" id="exampleFormControlInput1" value="<?php echo $b_id ?>" readonly>
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Member's Mobile Number :</label>
-                <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="Enter Member's Mobile Number : " name="mobile" pattern="[6-9]{1}[0-9]{9}">
+                <label for="exampleFormControlInput1" class="form-label">Member's Mobile Number : </label><span id="errmobile"></span>
+                <input type="number" class="form-control" id="mobile" placeholder="Enter Member's Mobile Number : "  onkeyup="validatemobile()" onchange="validatemobile()" maxlength="10" name="mobile" pattern="[6-9]{1}[0-9]{9}" required>
             </div>
             <div class="form-group mb-3">
-                <label for="exampleInputEmail1">Email address :</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter email">
+                <label for="exampleInputEmail1">Email address : </label><span id="erremail"></span>
+                <input type="email" onchange="validateemail()" onkeyup="validateemail()" id="email" class="form-control" aria-describedby="emailHelp" name="email" placeholder="Enter email" required>
             </div>
             <button name="add" type="submit" class="btn btn-dark">Add Member</button>
         </form>

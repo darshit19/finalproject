@@ -29,8 +29,7 @@ include 'ownerside.php';
                     <h5 class="card-title">FlatNo : <?php echo $_flatno ?></h5>
                     <p class="card-text">Maintainance Month : <?php echo '' . $month_names[$data['month'] - 1] . ''; ?>/<?php echo $data['year'] ?></p>
                     <p class="card-text">Payable Money : <?php echo $data['m_money'] . ' rs.'; ?></p>
-                    <a href="./paymaintainance.php?maint_id=<?php echo $data['maint_id']?>" class="btn btn-success <?php if($data['ac_status']==0){echo "disabled";}?>">Pay Maintainance</a>
-                     <p class="card-text my-2" style="color: red;"><?php if($data['ac_status']==0){echo "You have to contact your secretary as this month maintainance is disabled by him...\nYou can contact him through message panel!!";}?></p>   
+                    <a href="./paymaintainance.php?maint_id=<?php echo $data['maint_id']?>" class="btn btn-success ">Pay Maintainance</a>
                 </div>
             </div>
     <?php

@@ -6,6 +6,7 @@ $_flatno = $_SESSION['owedetails']['flatno'];
 <?php
 include './ownerside.php';
 ?>
+<script src="../js/mmvalidation.js"></script>
 <div class="content">
     <div class="container my-5 ">
         <h1 class="mb-4 ">Fill up The Form Details</h1>
@@ -17,13 +18,13 @@ include './ownerside.php';
             </div><br>
 
             <div class="form-group mb-1">
-                <label class="form-label" for="form3Example3">RENTER EMAIL :</label>
-                <input type="email" name="email" id="form3Example3" class="form-control form-control-lg" placeholder="abcdefgh@xyz.com" required>
+                <label class="form-label" for="form3Example3">RENTER EMAIL :</label><span id="erremail"></span>
+                <input type="email" name="email" onchange="validateemail()" onkeyup="validateemail()" id="email"  class="form-control form-control-lg" placeholder="abcdefgh@xyz.com" required>
             </div><br>
 
             <div class="form-group mb-1">
-                <label for="exampleFormControlInput1" class="form-label">RENTER'S MOBILE NUMBER :</label>
-                <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="Enter renter's Mobile Number : " maxlength="10" name="mobile" required>
+                <label for="exampleFormControlInput1" class="form-label">RENTER'S MOBILE NUMBER :</label><span id="errmobile"></span>
+                <input type="number" class="form-control" id="mobile" onkeyup="validatemobile()" onchange="validatemobile()" placeholder="Enter renter's Mobile Number : " maxlength="10" name="mobile" required>
             </div><br>
 
             <div class="form-group mb-1">

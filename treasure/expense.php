@@ -14,6 +14,7 @@ $bid = $_SESSION['tredetails']['b_id'];
 <div class="content">
     <a class="btn btn-dark my-5 mx-3 disabled" href="">Current Month Expense</a>
     <a class="btn btn-dark my-5" href="./previouseexpense.php">Previous Months' Expense</a>
+    <button  class="btn btn-dark mx-3 my-5" onclick="window.print()">Print</button>
 
     <?php
     $month = date('n');
